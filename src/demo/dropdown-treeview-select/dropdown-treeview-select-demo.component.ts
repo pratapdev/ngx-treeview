@@ -36,7 +36,7 @@ export class DropdownTreeviewSelectDemoComponent implements OnInit {
 
     loadBooks2() {
         this.items = [new TreeviewItem({
-            text: 'ABC',
+            id: 1,text: 'ABC',
             value: 123456
         })];
         this.value = undefined;

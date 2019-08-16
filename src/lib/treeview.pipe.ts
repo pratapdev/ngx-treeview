@@ -11,6 +11,6 @@ export class TreeviewPipe implements PipeTransform {
             return undefined;
         }
 
-        return objects.map(object => new TreeviewItem({ text: object[textField], value: object }));
+        return objects.map(object => new TreeviewItem({ id: object,text: object[textField], value: object }));
     }
 }

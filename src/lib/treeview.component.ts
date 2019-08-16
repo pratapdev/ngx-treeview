@@ -11,7 +11,7 @@ import { TreeviewHelper } from './treeview-helper';
 class FilterTreeviewItem extends TreeviewItem {
     private readonly refItem: TreeviewItem;
     constructor(item: TreeviewItem) {
-        super({
+        super({id: item.id,
             text: item.text,
             value: item.value,
             disabled: item.disabled,
@@ -66,7 +66,7 @@ export class TreeviewComponent implements OnChanges {
         private eventParser: TreeviewEventParser
     ) {
         this.config = this.defaultConfig;
-        this.allItem = new TreeviewItem({ text: 'All', value: undefined });
+        this.allItem = new TreeviewItem({ id: 'all',text: 'All', value: undefined });
         this.createHeaderTemplateContext();
     }
 

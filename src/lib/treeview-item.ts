@@ -7,6 +7,7 @@ export interface TreeviewSelection {
 }
 
 export interface TreeItem {
+    id:any;
     text: string;
     value: any;
     disabled?: boolean;
@@ -16,6 +17,7 @@ export interface TreeItem {
 }
 
 export class TreeviewItem {
+    id:any;
     private internalDisabled = false;
     private internalChecked = true;
     private internalCollapsed = false;
@@ -33,6 +35,7 @@ export class TreeviewItem {
             throw new Error('A text of item must be string object');
         }
         this.value = item.value;
+        this.id = item.id;
         if (isBoolean(item.checked)) {
             this.checked = item.checked;
         }
